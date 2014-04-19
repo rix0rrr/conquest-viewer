@@ -1,0 +1,426 @@
+/*set fonts*/
+@font-face {
+  font-family: celticgaramond;
+  src: url(../fonts/celticgaramond.eot) format("embedded-opentype"), url(../fonts/celticgaramond.ttf) format("truetype");
+}
+
+/* line 11, sass/conquest.scss */
+#wrapper {
+  position: relative;
+  margin: 10px auto 0;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 18, sass/conquest.scss */
+#gamediv {
+  position: relative;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+/* line 25, sass/conquest.scss */
+#conquestMapSvg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+/* line 34, sass/conquest.scss */
+#controls {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+/* line 41, sass/conquest.scss */
+#controls label, #controls input, #controls .control {
+  margin-top: 0;
+  background: url(/img/UI-map.png) no-repeat;
+  cursor: pointer;
+}
+/* line 47, sass/conquest.scss */
+#controls button, #controls input[type=button] {
+  width: 44px;
+  height: 44px;
+  border: 0px;
+}
+/* line 53, sass/conquest.scss */
+#controls input[type=text] {
+  background: transparent;
+}
+/* line 57, sass/conquest.scss */
+#controls * {
+  display: inline-block;
+}
+/* line 61, sass/conquest.scss */
+#controls > div {
+  bottom: 4px;
+  height: 44px;
+  position: absolute;
+}
+/* line 67, sass/conquest.scss */
+#controls > div > label {
+  width: 46px;
+  height: 100%;
+  background-position: -58px -6px;
+}
+/* line 73, sass/conquest.scss */
+#controls > div > label > input {
+  display: none;
+}
+/* line 77, sass/conquest.scss */
+#controls > div > label[for$=_1] {
+  width: 48px;
+  background-position: -10px -6px;
+}
+/* line 81, sass/conquest.scss */
+#controls > div > label[for$=_1][checked] {
+  background-position: -10px -52px;
+}
+/* line 87, sass/conquest.scss */
+#controls > div > label[for$=_2][checked] {
+  background-position: -58px -52px;
+}
+/* line 92, sass/conquest.scss */
+#controls > div > label[for$=_all] {
+  width: 48px;
+  background-position: -104px -6px;
+}
+/* line 96, sass/conquest.scss */
+#controls > div > label[for$=_all][checked] {
+  background-position: -104px -52px;
+}
+/* line 102, sass/conquest.scss */
+#controls > div:first-child {
+  left: 2%;
+}
+/* line 106, sass/conquest.scss */
+#controls > div:last-child {
+  right: 2%;
+}
+
+/* line 112, sass/conquest.scss */
+#midControl {
+  left: 50%;
+  margin-left: -375px;
+  width: 750px;
+}
+
+/* line 120, sass/conquest.scss */
+#backButtons > input:first-child {
+  background-position: -180px -6px;
+}
+/* line 124, sass/conquest.scss */
+#backButtons > input:last-child {
+  background-position: -224px -6px;
+}
+
+/* line 131, sass/conquest.scss */
+#forwardButtons > input {
+  background-position: -268px -6px;
+}
+/* line 134, sass/conquest.scss */
+#forwardButtons > input:last-child {
+  background-position: -312px -6px;
+}
+
+/* line 141, sass/conquest.scss */
+#playButton.playing {
+  background-position: -425px -52px;
+}
+/* line 144, sass/conquest.scss */
+#playButton.paused {
+  background-position: -468px -52px;
+}
+
+/* line 150, sass/conquest.scss */
+#textBox {
+  height: 44px;
+  background: url(/img/UI-map.png) no-repeat;
+  background-position: -10px -98px;
+  cursor: pointer;
+}
+/* line 158, sass/conquest.scss */
+#textBox.active {
+  background-position: -10px -191px;
+}
+/* line 161, sass/conquest.scss */
+#textBox.active #moveSelector {
+  pointer-events: auto;
+}
+/* line 164, sass/conquest.scss */
+#textBox.active #moveSelector > option {
+  display: list-item;
+}
+
+/* line 171, sass/conquest.scss */
+.slider {
+  width: 142px;
+  background: url(/img/UI-map.png) no-repeat;
+  background-position: -366px -6px;
+  position: relative;
+}
+/* line 177, sass/conquest.scss */
+.slider > .slider-thumb {
+  width: 44px;
+  height: 44px;
+  margin-left: -10px;
+  position: absolute;
+  z-index: 2;
+  background: url(/img/UI-map.png) no-repeat;
+  background-position: -355px -52px;
+  cursor: pointer;
+}
+
+/* line 191, sass/conquest.scss */
+.regionText {
+  font: bold 16px celticgaramond;
+}
+
+/* line 194, sass/conquest.scss */
+.playerViewText {
+  font: bold 23px celticgaramond;
+}
+
+/* line 197, sass/conquest.scss */
+.armiesViewText {
+  font: normal 17px celticgaramond;
+  fill: #595343;
+}
+
+/* line 201, sass/conquest.scss */
+.roundText {
+  font: normal 28px celticgaramond;
+  fill: #595343;
+}
+
+/* line 205, sass/conquest.scss */
+.gameEndText {
+  font: normal 65px celticgaramond;
+  stroke: white;
+  stroke-width: 0.6px;
+}
+
+/*set controls sizes and images*/
+/* line 214, sass/conquest.scss */
+.forwardButtonImage:active {
+  background-position: -259px -48px;
+}
+
+/* line 218, sass/conquest.scss */
+.skipforwardButtonImage:active {
+  background-position: -302px -48px;
+}
+
+/* line 221, sass/conquest.scss */
+.backwardButtonImage:active {
+  background-position: -215px -48px;
+}
+
+/* line 224, sass/conquest.scss */
+.skipbackwardButtonImage:active {
+  background-position: -171px -48px;
+}
+
+/* line 228, sass/conquest.scss */
+.playButtonImage:active {
+  background-position: -416px -140px;
+}
+
+/* line 232, sass/conquest.scss */
+.pauseButtonImage:active {
+  background-position: -459px -140px;
+}
+
+/* line 236, sass/conquest.scss */
+.fullGameViewButtonImageActive {
+  background-position: -91px -46px;
+}
+
+/*element positioning*/
+/* line 241, sass/conquest.scss */
+#paper {
+  position: relative;
+  float: left;
+  z-index: 1;
+  padding-bottom: 16px;
+}
+
+/* line 248, sass/conquest.scss */
+#controlsSmall {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 530px;
+  margin-left: -265px;
+}
+
+/* line 255, sass/conquest.scss */
+#backButtons {
+  position: relative;
+  float: left;
+  left: 3%;
+}
+
+/* line 260, sass/conquest.scss */
+#textBox {
+  position: absolute;
+  left: 50%;
+  margin-left: -255px;
+  border: 0px;
+  width: 510px;
+  text-align: left;
+}
+
+/* line 268, sass/conquest.scss */
+#moveText {
+  display: block;
+  position: relative;
+  color: #716955;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding-top: 1px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  margin: 0 auto;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 287, sass/conquest.scss */
+#forwardButtons {
+  position: relative;
+  left: 3%;
+  float: right;
+}
+
+/* line 293, sass/conquest.scss */
+#moveBox {
+  position: relative;
+  z-index: 10;
+}
+
+/* line 297, sass/conquest.scss */
+#moveSelector {
+  height: 0px;
+  width: 498px;
+  max-width: 100%;
+  position: absolute;
+  bottom: 40px;
+  margin-left: 3px;
+  border: 0px;
+  opacity: 0;
+  background-color: #716955;
+  pointer-events: none;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  color: #fbe6b8;
+}
+
+/** Jackie's top overrides */
+/* line 314, sass/conquest.scss */
+#titleText {
+  font-size: 3.2em;
+  padding: 10px;
+  text-align: center;
+}
+
+/*for small screens*/
+@media screen and (max-width: 1333px) {
+  /* line 322, sass/conquest.scss */
+  #midControl {
+    width: 510px;
+    left: 50%;
+    margin-left: -255px;
+  }
+
+  /* line 328, sass/conquest.scss */
+  #backButtons {
+    left: 50%;
+    margin-left: -110px;
+  }
+
+  /* line 333, sass/conquest.scss */
+  #forwardButtons {
+    left: 50%;
+    margin-left: -22px;
+  }
+
+  /* line 338, sass/conquest.scss */
+  #textBox {
+    bottom: 42px;
+    left: 50%;
+  }
+
+  /* line 342, sass/conquest.scss */
+  #changeViewButtons {
+    position: relative;
+    float: left;
+  }
+
+  /* line 346, sass/conquest.scss */
+  #forwardButtons {
+    float: left;
+  }
+
+  /* line 349, sass/conquest.scss */
+  .slider {
+    position: relative;
+    float: left;
+    bottom: -10px;
+    right: -4%;
+  }
+}
+@media screen and (min-width: 1700) {
+  /* line 358, sass/conquest.scss */
+  #wrapper {
+    width: 1475px;
+    height: 790px;
+  }
+
+  /* line 363, sass/conquest.scss */
+  #gamediv {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 850) {
+  /* line 371, sass/conquest.scss */
+  #wrapper {
+    width: 737.5px;
+    height: 464px;
+  }
+
+  /* line 376, sass/conquest.scss */
+  #gamediv {
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}

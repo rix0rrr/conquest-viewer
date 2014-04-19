@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div style="float: left; width: 60%;">
+      <h3>The very simplest Conquest Log Viewer</h3>
+      <object data="conquest-map.svg" id="map"></object>
+    </div>
+    <div style="float: right; width: 39%;">
+      <h3 data-bind="text: title"></h3>
+      <select data-bind="options: replays, value: selectedInList"></select>
+      <button data-bind="click: refreshList;">&#8635;</button><br>
+
+      <button class="play-btn" data-bind="click: begin, enable: canRegress()">&lt;&lt;<br>g</button>
+      <button class="play-btn" data-bind="click: regress, enable: canRegress()">&lt;<br>k</button>
+      <button class="play-btn" data-bind="click: advance, enable: canAdvance()">&gt;<br>j</button>
+      <button class="play-btn" data-bind="click: end, enable: canAdvance()">&gt;&gt;<br>G</button>
+
+      <div>Round: <span data-bind="text: round"></span></div>
+      <div style="background: lightblue; margin: 0.5em 0; padding: 0 0.2em; border: solid 1px black;">
+        <div data-bind="html: roundCommands" class="commands"></div>
+      </div>
+    </div>
+  <!-- <img src="conquest-map.svg" id="map"> -->
+
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="svg.js/dist/svg.min.js"></script>
+    <script src="knockoutjs/knockout-3.1.0.js"></script>
+    <script src="mousetrap/mousetrap.min.js"></script>
+    <script src="viewer.js"></script>
+  </body>
+</html>

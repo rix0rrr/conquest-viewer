@@ -1,0 +1,3 @@
+Put your game log files here
+
+They should contain lines with "Round 1", "Round 2", etc. in them, and have "update_map" lines.

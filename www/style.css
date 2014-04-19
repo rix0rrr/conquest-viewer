@@ -1,0 +1,17 @@
+h3 {
+  margin-top: 0px;
+}
+
+.commands p {
+  margin: 0.5em 0;
+}
+
+.play-btn {
+  width: 3.5em;
+  height: 3.5em;
+}
+
+select {
+  width: 300px;
+  margin: 0.5em 0;
+}

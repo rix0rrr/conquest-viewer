@@ -36,4 +36,4 @@ app.get('/list', function(req, res) {
 });
 
 server.listen(3000);
-console.log("Express server listening on port %d in %s mode", server.address().port, app.settings.env);
+console.log('Running at http://localhost:%d/', server.address().port);

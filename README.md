@@ -2,6 +2,8 @@
 
 This is viewer for the Conquest AI game at [http://theaigames.com/](http://theaigames.com/).
 
+![Screenshot](screenshot.png "Screenshot")
+
 ## Prerequisites
 
 * Node.js
